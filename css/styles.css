@@ -1,0 +1,14 @@
+.container {
+  margin: 20px;
+  padding: 20px;
+  background-color: #76D6FF; }
+
+#result {
+  color: #7A81FF; }
+
+.test {
+  margin-top: 80px; }
+
+@media screen and (max-width: 700px) {
+  input {
+    display: block; } }

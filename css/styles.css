@@ -2,12 +2,13 @@
  * Color Scheme
  */
 body {
-  background-color: #eeeeee; }
+  background-color: #eeeeee;
+  font-family: Ubuntu, sans-serif; }
 
 .container {
   margin: 20px;
   padding: 20px;
-  background-color: whitesmoke; }
+  background-color: white; }
 
 #result {
   color: #1d1d1d; }

@@ -2,11 +2,12 @@
 
 body{
   background-color: $grey-1;
+  font-family: Ubuntu, sans-serif;
 }
 .container {
   margin:20px;
   padding:20px;
-  background-color: $muted-grey;
+  background-color: white;
 }
 #result {
   color:$grey-6;

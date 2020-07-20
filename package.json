@@ -1,8 +1,19 @@
 {
   "dependencies": {
+    "jest": "^26.1.0",
     "node-sass": "^4.14.1"
   },
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "babel-jest": "^26.1.0",
+    "lolex": "^6.0.0"
+  },
   "scripts": {
-    "scss": "node-sass --watch scss -o css"
-  }
+    "scss": "node-sass --watch scss -o css",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "dev": "php -S localhost:8008"
+  },
+  "type": "module"
 }

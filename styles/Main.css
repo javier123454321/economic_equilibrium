@@ -1,0 +1,8 @@
+.container {margin:20px;padding:20px;background-color:#76D6FF;}
+#result {color:#7A81FF;}
+
+@media screen and (max-width: 700px) {
+  input {
+    display:block;
+  }
+}

@@ -21,18 +21,19 @@
 }
 
  export default function renderSumWidget(){
-    let Mdemand = -500;
-    let Bdemand = 10000;
-    let Msupply = 0; // what if ABC can hire more people when price goes up?
-    let Bsupply = 8000;
-
-    let consumption;
-    let supply;
-    let message;
     
     document.getElementById("calculate").addEventListener("click", calculateOutput);
     
     function calculateOutput() {
+        let Mdemand = -500;
+        let Bdemand = parseInt(document.getElementById("demand-input").value);
+        let Msupply = 0; // what if ABC can hire more people when price goes up?
+        let Bsupply = parseInt(document.getElementById("supply-input").value);
+    
+        let consumption;
+        let supply;
+        let message = "";
+
         let price;
         let priceOptions = document.getElementsByName("price");
     
@@ -64,7 +65,7 @@
         ${consumption} per month at $${price} 
         <h4> Yields: </h4>
         Revenue: $${revenue} per month
-        <h4>${message}</h4>
+        ${ (message? "<h4>" + message + "</h4>": "") }
      `
     
         document.getElementById("result").innerHTML = template

@@ -6,6 +6,11 @@ body {
   font-family: Ubuntu, sans-serif;
   min-width: 100vh; }
 
+.text-input {
+  border: none;
+  border-bottom: solid 1px #464646;
+  background-color: whitesmoke; }
+
 a {
   color: #b36703;
   font-style: none; }
@@ -55,6 +60,12 @@ a {
 
 .drop-shadow {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06), 0 3px 6px rgba(0, 0, 0, 0.03); }
+
+.p-1 {
+  padding: .5em; }
+
+.pb-0 {
+  padding-bottom: 0; }
 
 .mt-2 {
   margin-top: 1em; }

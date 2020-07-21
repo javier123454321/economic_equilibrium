@@ -10,16 +10,28 @@
         </head>
     <body>
         <div class="content">
-            <div id="input" class="flex card drop-shadow">
+            <div id="input" class="card drop-shadow">
                 <form>
                     <div id="xyz-widget" class="section">
                     </div>
-    
-                    <input id="calculate" class="button mt-2 drop-shadow" type="button" value="Calculate">
-      
+                    <div class="flex column content-center w-fit">
+                        <div class="text-al-right">
+                            <span>Supply: </span>
+                            <input class="text-input p-1 pb-0" type="text" name="supply" value="8000" id="supply-input"><br>
+                        </div>
+                        <div class="text-al-right">
+                            <span>Demand: </span>
+                            <input class="text-input p-1 pb-0" type="text" name="demand" value="10000" id="demand-input"><br>
+                        </div>
+
+                    </div>
+                    <div id="button-container" class="w-100 flex content-center">
+                        <input id="calculate" class="button mt-2 drop-shadow" type="button" value="Calculate">
+                    </div>
                 </form>
             </div>
             <div id="result" class="card drop-shadow"></div>
+            <div></div>
         </div>
     <script src="src/app.js"  type="module" ></script>
 </body>

@@ -46,7 +46,15 @@
         }
     
         let revenue = consumption * price;
+
+        let template = `
+        <h3>XYZ Widgets sold:</h3> 
+        ${consumption} per month
+        <br>
+        Revenue: ${revenue} per month
+        <h4>${message}</h4>
+     `
     
-        document.getElementById("result").innerHTML = "XYZ Widgets sold:"+consumption+"/month<br>Revenue:"+revenue+"/month<br><br>"+message;
+        document.getElementById("result").innerHTML = template
     }
 }

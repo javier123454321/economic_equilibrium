@@ -7,13 +7,13 @@ body{
 }
 a{
   color: $accent-orange-1;
+  font-style: none;
 }
 .content{
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   min-width: 100vw;
 }
 .card {
@@ -33,9 +33,29 @@ a{
   color: $soft-grey-2;
   border: none;
   padding: 1.5em 4em;
+  transition: .3s ease-in-out;
+  &:hover{
+    cursor: pointer;
+    transform: scale(1.01);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.06), 0 3px 9px rgba(0, 0, 0, 0.03);
+  }
 }
 #input{
-  text-align: center;
+  text-align: left;
+  justify-content: space-around;
+  .column{
+    flex-direction: column;
+  }
+}
+
+.flex{
+  display: flex;
+  &.content-center{
+    justify-content: center;
+  }
+}
+.text-al-right{
+  text-align: right;
 }
 .drop-shadow{
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06), 0 3px 6px rgba(0, 0, 0, 0.03);
@@ -43,6 +63,13 @@ a{
 .mt-2{
   margin-top: 1em;
 }
+.w-fit{
+  width: fit-content;
+}
+.w-100{
+  width: 100%
+}
+
 #result {
   color:$grey-6;
 }

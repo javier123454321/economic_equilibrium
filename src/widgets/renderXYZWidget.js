@@ -7,7 +7,7 @@ function radioButtons(){
 }
 export default function renderXYZwidget(){
     let template = `
-        Price for XYZ Widget:
+        <h3>Price for XYZ Widget:</h3>
         <div id="price-input">
             ${ radioButtons() }
         </div>`

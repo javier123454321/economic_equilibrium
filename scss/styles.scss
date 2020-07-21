@@ -17,9 +17,15 @@ body{
   margin:20px;
   padding:20px;
   background-color: white;
-  max-width: 400px;
+  max-width: 550px;
   border-radius: 8px;
   width: 100%;
+  input{
+    margin-bottom: 1em;
+  }
+}
+#input{
+  text-align: center;
 }
 .drop-shadow{
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06), 0 3px 6px rgba(0, 0, 0, 0.03);

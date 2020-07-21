@@ -1,21 +1,7 @@
+import renderXYZWidget from './widgets/renderXYZWidget.js'
+
 export default function renderApp(){
-    function renderXYZwidget(){
-        let widgetContent = `
-            Price for XYZ Widget:
-            <input type="radio" name="price" value=1> $1
-            <input type="radio" name="price" value=2> $2
-            <input type="radio" name="price" value=3> $3
-            <input type="radio" name="price" value=4> $4
-            <input type="radio" name="price" value=5> $5
-            <input type="radio" name="price" value=6> $6
-            <input type="radio" name="price" value=7> $7
-            <input type="radio" name="price" value=8> $8
-            <input type="radio" name="price" value=9> $9
-            <input type="radio" name="price" value=10> $10`
-        return widgetContent
-    }
-    
-    document.getElementById('xyz-widget').innerHTML += renderXYZwidget()
+    renderXYZWidget();
     // Equilibrium Price Equations:
     //   Qsupply = Msupply * price + Bsupply
     //   Qdemand = Mdemand * price + Bdemand
@@ -67,3 +53,4 @@ export default function renderApp(){
         document.getElementById("result").innerHTML = "XYZ Widgets sold:"+consumption+"/month<br>Revenue:"+revenue+"/month<br><br>"+message;
     }
 };
+renderApp()

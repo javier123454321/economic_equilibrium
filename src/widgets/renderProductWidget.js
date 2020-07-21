@@ -6,9 +6,9 @@ function radioButtons(){
     }
     return radioButtons;
 }
-export default function renderXYZwidget(){
+export default function renderProductWidget(){
     let template = `
-        <h3>Price for XYZ Widget:</h3>
+        <h3>Search for Equilibrium Price for Product:</h3>
         <div id="price-input">
             ${ radioButtons() }
         </div>`

@@ -48,10 +48,10 @@
         let revenue = consumption * price;
 
         let template = `
-        <h3>XYZ Widgets sold:</h3> 
-        ${consumption} per month
-        <br>
-        Revenue: ${revenue} per month
+        <h3>Amount of Products Sold:</h3> 
+        ${consumption} per month at $${price} 
+        <h4> Yields: </h4>
+        Revenue: $${revenue} per month
         <h4>${message}</h4>
      `
     

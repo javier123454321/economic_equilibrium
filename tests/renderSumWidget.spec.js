@@ -28,8 +28,8 @@ describe('renderSumWidget', function() {
     it('Should render an output when a user selects an input', () => {
         document.getElementById('testRadio').click();
         document.getElementById("calculate").click();
-        
-        expect( document.getElementById('result').querySelector('h3').textContent ).toBe("XYZ Widgets sold:");
+
+        expect( document.getElementById('result').querySelector('h3').textContent ).toBe("Amount of Products Sold:");
     })
     it('Should render the success message when equilibrium is reached', () => {
 
@@ -39,6 +39,6 @@ describe('renderSumWidget', function() {
         document.getElementById('equilibriumInput').click();
         document.getElementById("calculate").click();
 
-        expect( document.getElementById('result').querySelector('h4').textContent ).toBe("This is the equilibrium price");
+        expect( document.getElementById('result').querySelectorAll('h4')[1].textContent ).toBe("This is the equilibrium price");
     })
 })

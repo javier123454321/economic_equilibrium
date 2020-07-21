@@ -1,4 +1,4 @@
-import renderXYZwidget from '../src/widgets/renderXYZWidget.js';
+import renderProductWidget from '../src/widgets/renderProductWidget.js';
 const fs = require('fs');
 const path = require('path');
 const html = fs.readFileSync(path.resolve(__dirname, '../index.html'), 'utf8');
@@ -9,7 +9,7 @@ jest
 describe('renderXYZwidget', function () {
     beforeEach(() => {
         document.documentElement.innerHTML = html.toString();
-        renderXYZwidget();
+        renderProductWidget();
     })
     it('Should render a list of prices per widget', () => {
         expect( document.getElementById('price-input') ).toBeTruthy()

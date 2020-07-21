@@ -5,6 +5,9 @@ body{
   font-family: Ubuntu, sans-serif;
   min-width: 100vh;
 }
+a{
+  color: $accent-orange-1;
+}
 .content{
   margin: auto;
   display: flex;

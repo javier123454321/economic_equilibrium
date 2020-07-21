@@ -6,6 +6,9 @@ body {
   font-family: Ubuntu, sans-serif;
   min-width: 100vh; }
 
+a {
+  color: #b36703; }
+
 .content {
   margin: auto;
   display: flex;

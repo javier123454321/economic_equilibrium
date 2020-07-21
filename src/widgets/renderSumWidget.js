@@ -33,16 +33,16 @@
     
         if (consumption > supply) {
             consumption = supply;
-            message = "ABC Company canot make enough XYZ Widgets";
+            message = "Demand is greater than supply, the company would have to either increase price or produce more.";
         }
     
         if (consumption <= 0) {
             consumption = 0;
-            message = "No one will buy XYZ Widgets at this price";
+            message = "This price is higher than what people are willing to pay";
         }
 
         if (isMaxRevenue(Msupply, Mdemand, Bsupply, Bdemand, price)) {
-            message = "This is the equilibrium price"
+            message = "This is the <a href='https://en.wikipedia.org/wiki/Economic_equilibrium'>equilibrium price</a>"
         }
     
         let revenue = consumption * price;

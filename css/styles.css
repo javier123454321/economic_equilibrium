@@ -24,11 +24,21 @@ body {
   .card input {
     margin-bottom: 1em; }
 
+.button {
+  border-radius: 4px;
+  background-color: #5a5a5a;
+  color: #e4e4e4;
+  border: none;
+  padding: 1.5em 4em; }
+
 #input {
   text-align: center; }
 
 .drop-shadow {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06), 0 3px 6px rgba(0, 0, 0, 0.03); }
+
+.mt-2 {
+  margin-top: 1em; }
 
 #result {
   color: #1d1d1d; }

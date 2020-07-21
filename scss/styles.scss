@@ -24,11 +24,21 @@ body{
     margin-bottom: 1em;
   }
 }
+.button{
+  border-radius: 4px;
+  background-color: $grey-3;
+  color: $soft-grey-2;
+  border: none;
+  padding: 1.5em 4em;
+}
 #input{
   text-align: center;
 }
 .drop-shadow{
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06), 0 3px 6px rgba(0, 0, 0, 0.03);
+}
+.mt-2{
+  margin-top: 1em;
 }
 #result {
   color:$grey-6;

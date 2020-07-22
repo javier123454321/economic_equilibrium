@@ -37,10 +37,12 @@ a{
     padding: .5em;
     font-size: .8em;
     opacity: 0;
+    z-index: -1;
     transition: .3s ease-in-out;
   }
   &:hover{
     & + .tooltip{
+      z-index: 2;
       opacity: 1;
     }
   }

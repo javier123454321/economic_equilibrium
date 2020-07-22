@@ -14,10 +14,10 @@
                 <h1>
                     What is the <a href='https://en.wikipedia.org/wiki/Economic_equilibrium' alt="Wikipedia Link to Equilibrium Price">equilibrium price?</a>
                 </h1>
-                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PEMkfgrifDw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="500" height="300" src="https://www.youtube-nocookie.com/embed/PEMkfgrifDw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div id="input" class="card drop-shadow">
-                <form onkeyup="alert()">
+                <form id="main-form">
                     <div id="xyz-widget" class="section">
                     </div>
                     <div class="flex column content-center w-fit">
@@ -49,7 +49,11 @@
                     </div>
                 </form>
             </div>
-            <div id="result" class="card drop-shadow"></div>
+            
+            <div class="card drop-shadow">
+                <div id="current-equations"></div>
+                <div id=result></div>
+            </div>
         </div>
     <script src="src/app.js"  type="module" ></script>
 </body>

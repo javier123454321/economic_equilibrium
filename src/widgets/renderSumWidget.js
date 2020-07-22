@@ -41,6 +41,9 @@
             }
         }
         consumption = (price * Mdemand) + highestPriceConsumersWillPay;
+        if(consumption < 0){
+            consumption = 0
+        } 
         supply = (price * Msupply )+ costToProduceTheItem;
     
         message = calculateSupplyVsDemand(
@@ -62,7 +65,9 @@
         Revenue: $${revenue} per month
         <p class="output-message">${message}</p>
      `
-    
+        if(isNaN(price)){
+            template = "<h3>Please Select a price to see how supply and demand behaves</h3>"
+        }
         document.getElementById("result").innerHTML = template
     }
 }

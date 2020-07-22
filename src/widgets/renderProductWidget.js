@@ -14,4 +14,3 @@ export default function renderProductWidget(){
         </div>`
     document.getElementById('xyz-widget').innerHTML = template;
 }
-

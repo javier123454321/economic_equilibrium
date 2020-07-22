@@ -32,13 +32,12 @@ describe('renderSumWidget', function() {
         expect( document.getElementById('result').querySelector('h3').textContent ).toBe("Amount of Products Sold:");
     })
     it('Should render the success message when equilibrium is reached', () => {
-
-        expect( document.getElementById('result').querySelector('h4') ).toBeFalsy();
+        expect( document.getElementById('result').querySelector('p') ).toBeFalsy();
 
         document.getElementById('xyz-widget').innerHTML += renderInput(4, 'equilibriumInput');
         document.getElementById('equilibriumInput').click();
         document.getElementById("calculate").click();
 
-        expect( document.getElementById('result').querySelectorAll('h4')[1].textContent ).toBe("This is the equilibrium price");
+        expect( document.getElementById('result').querySelectorAll('p.output-message')[0].textContent ).toBe("This is the equilibrium price");
     })
 })

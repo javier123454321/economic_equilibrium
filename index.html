@@ -10,19 +10,38 @@
         </head>
     <body>
         <div class="content">
+            <div class="card drop-shadow text-al-center">
+                <h1>
+                    What is the <a href='https://en.wikipedia.org/wiki/Economic_equilibrium' alt="Wikipedia Link to Equilibrium Price">equilibrium price?</a>
+                </h1>
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PEMkfgrifDw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
             <div id="input" class="card drop-shadow">
-                <form>
+                <form onkeyup="alert()">
                     <div id="xyz-widget" class="section">
                     </div>
                     <div class="flex column content-center w-fit">
                         <div class="text-al-right">
-                            <span>Supply: </span>
-                            <input class="text-input p-1 pb-0" type="text" name="supply" value="8000" id="supply-input"><br>
+                            <span>Maximum Price:
+                                <span class="info-icon"> i </span> <span class="tooltip">The price at which not single consumer will buy the product.</span>
+                             </span>
+                            <input class="text-input p-1 pb-0" type="text" name="demand" value="10000" id="higestPrice-input"><br>
                         </div>
                         <div class="text-al-right">
-                            <span>Demand: </span>
-                            <input class="text-input p-1 pb-0" type="text" name="demand" value="10000" id="demand-input"><br>
+                            <span>Cost:
+                                    <span class="info-icon"> i </span> <span class="tooltip">The cost to make the product. Selling for less does not make a profit.</span>
+                            </span> 
+                            <input class="text-input p-1 pb-0" type="text" name="demand" value="8000" id="cost-input"><br>
                         </div>
+                        <div class="text-al-right">
+                            <span>Supply Multiplyer: <span class="info-icon"> i </span> <span class="tooltip">How many items can the company provide</span></span>
+                            <input class="text-input p-1 pb-0" type="text" name="supply" value="0" id="supply-input"><br>
+                        </div>
+                        <div class="text-al-right">
+                            <span>Demand Multiplyer: </span>
+                            <input class="text-input p-1 pb-0" type="text" name="demand" value="-500" id="demand-input"><br>
+                        </div>
+
 
                     </div>
                     <div id="button-container" class="w-100 flex content-center">
@@ -31,7 +50,6 @@
                 </form>
             </div>
             <div id="result" class="card drop-shadow"></div>
-            <div></div>
         </div>
     <script src="src/app.js"  type="module" ></script>
 </body>

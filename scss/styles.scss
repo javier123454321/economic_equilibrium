@@ -5,14 +5,54 @@ body{
   font-family: Ubuntu, sans-serif;
   min-width: 100vh;
 }
+h1, h2,
+h3, h4,
+h5, h6{
+  font-weight: 700;
+}
+h1{
+  font-size: 1.8em;
+}
+a{
+  color: $accent-orange-1;
+  text-decoration: none;
+}
 .text-input{
   border: none;
   border-bottom: solid 1px $grey-4;
   background-color: $muted-grey;
 }
-a{
-  color: $accent-orange-1;
-  font-style: none;
+
+.info-icon{
+  border: solid 1px $grey-3;
+  color: $grey-3;
+  padding: 2px 5px;
+  border-radius: 10px;
+  font-size: .6em;
+  cursor: pointer;
+  & + .tooltip{
+    position: absolute;
+    background-color: $grey-5;
+    color: $soft-grey-2;
+    padding: .5em;
+    font-size: .8em;
+    opacity: 0;
+    transition: .3s ease-in-out;
+  }
+  &:hover{
+    & + .tooltip{
+      opacity: 1;
+    }
+  }
+}
+.output-message{
+  font-size: 1em;
+  font-weight: 500;
+  color: $grey-4
+}
+.emphasis{
+  color: $grey-6;
+  font-weight: 600;
 }
 .content{
   margin: auto;
@@ -61,6 +101,9 @@ a{
 }
 .text-al-right{
   text-align: right;
+}
+.text-al-center{
+  text-align: center;
 }
 .drop-shadow{
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06), 0 3px 6px rgba(0, 0, 0, 0.03);

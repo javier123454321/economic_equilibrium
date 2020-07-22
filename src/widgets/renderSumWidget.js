@@ -1,23 +1,18 @@
- function isMaxRevenue(Msupply, Mdemand, Bsupply, Bdemand, price){
-    let Qsupply = Msupply * price + Bsupply
-    let Qdemand = Mdemand * price + Bdemand
-    return Qsupply == Qdemand;
- }
-
- function calculateSupplyVsDemand(supply, price, consumption, Msupply, Mdemand, Bsupply, Bdemand) {
+ function calculateSupplyVsDemand(supply, price, consumption, Msupply, Mdemand, costToProduceTheItem, highestPriceConsumersWillPay) {
     if (consumption > supply) {
-        consumption = supply;
-        return "Demand is greater than supply, the company would have to either increase price or produce more.";
+        return `Demand is greater than supply, This would leave consumers with a shortage of 
+        <span class='emphasis'> ${consumption - supply} </span> units. 
+        The company would have to either increase price or produce more.`;
     }
 
     if (consumption <= 0) {
-        consumption = 0;
-        return "This price is higher than what people are willing to pay";
+        return "This price is higher than what people are willing to pay, there is excess supply";
     }
 
-    if (isMaxRevenue(Msupply, Mdemand, Bsupply, Bdemand, price)) {
-        return "This is the <a href='https://en.wikipedia.org/wiki/Economic_equilibrium'>equilibrium price</a>";
+    if (consumption == supply) {
+        return "This is the equilibrium price";
     }
+    return "People will buy some, but there will be <span class='emphasis'>"+( supply - consumption ) +"</span> items left over as it is too expensive"
 }
 
  export default function renderSumWidget(){
@@ -25,10 +20,10 @@
     document.getElementById("calculate").addEventListener("click", calculateOutput);
     
     function calculateOutput() {
-        let Mdemand = -500;
-        let Bdemand = parseInt(document.getElementById("demand-input").value);
-        let Msupply = 0; // what if ABC can hire more people when price goes up?
-        let Bsupply = parseInt(document.getElementById("supply-input").value);
+        let Mdemand =  parseInt(document.getElementById("demand-input").value);
+        let highestPriceConsumersWillPay = parseInt(document.getElementById("higestPrice-input").value);
+        let Msupply =  parseInt(document.getElementById("supply-input").value);
+        let costToProduceTheItem = parseInt(document.getElementById("cost-input").value);
     
         let consumption;
         let supply;
@@ -38,15 +33,15 @@
         let priceOptions = document.getElementsByName("price");
     
         message = "";
-    
+        
         for (let i = 0; i < priceOptions.length; i++) {
             if (priceOptions[i].checked) {
                 price = priceOptions[i].value;
                 break;
             }
         }
-        consumption = (price * Mdemand) + Bdemand;
-        supply = (price * Msupply )+ Bsupply;
+        consumption = (price * Mdemand) + highestPriceConsumersWillPay;
+        supply = (price * Msupply )+ costToProduceTheItem;
     
         message = calculateSupplyVsDemand(
                 supply, 
@@ -54,8 +49,8 @@
                 consumption, 
                 Msupply, 
                 Mdemand, 
-                Bsupply, 
-                Bdemand
+                costToProduceTheItem, 
+                highestPriceConsumersWillPay
             );
     
         let revenue = consumption * price;
@@ -65,7 +60,7 @@
         ${consumption} per month at $${price} 
         <h4> Yields: </h4>
         Revenue: $${revenue} per month
-        ${ (message? "<h4>" + message + "</h4>": "") }
+        <p class="output-message">${message}</p>
      `
     
         document.getElementById("result").innerHTML = template

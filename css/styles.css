@@ -6,14 +6,49 @@ body {
   font-family: Ubuntu, sans-serif;
   min-width: 100vh; }
 
+h1, h2,
+h3, h4,
+h5, h6 {
+  font-weight: 700; }
+
+h1 {
+  font-size: 1.8em; }
+
+a {
+  color: #b36703;
+  text-decoration: none; }
+
 .text-input {
   border: none;
   border-bottom: solid 1px #464646;
   background-color: whitesmoke; }
 
-a {
-  color: #b36703;
-  font-style: none; }
+.info-icon {
+  border: solid 1px #5a5a5a;
+  color: #5a5a5a;
+  padding: 2px 5px;
+  border-radius: 10px;
+  font-size: .6em;
+  cursor: pointer; }
+  .info-icon + .tooltip {
+    position: absolute;
+    background-color: #333333;
+    color: #e4e4e4;
+    padding: .5em;
+    font-size: .8em;
+    opacity: 0;
+    transition: .3s ease-in-out; }
+  .info-icon:hover + .tooltip {
+    opacity: 1; }
+
+.output-message {
+  font-size: 1em;
+  font-weight: 500;
+  color: #464646; }
+
+.emphasis {
+  color: #1d1d1d;
+  font-weight: 600; }
 
 .content {
   margin: auto;
@@ -57,6 +92,9 @@ a {
 
 .text-al-right {
   text-align: right; }
+
+.text-al-center {
+  text-align: center; }
 
 .drop-shadow {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06), 0 3px 6px rgba(0, 0, 0, 0.03); }

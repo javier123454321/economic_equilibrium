@@ -7,13 +7,14 @@
     "@babel/core": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
     "babel-jest": "^26.1.0",
+    "live-server": "^1.2.1",
     "lolex": "^6.0.0"
   },
   "scripts": {
-    "scss": "node-sass --watch scss -o css",
+    "scss": "node-sass --watch scss -o public/css",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "dev": "php -S localhost:8008"
+    "dev": "live-server --port=8008 --open=./public"
   },
   "type": "module"
 }

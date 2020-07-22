@@ -1,4 +1,4 @@
- function calculateSupplyVsDemand(supply, price, consumption, Msupply, Mdemand, costToProduceTheItem, highestPriceConsumersWillPay) {
+ function calculateSupplyVsDemand(supply, consumption) {
     if (consumption > supply) {
         return `Demand is greater than supply, This would leave consumers with a shortage of 
         <span class='emphasis'> ${consumption - supply} </span> units. 
@@ -46,15 +46,7 @@
         } 
         supply = (price * Msupply )+ costToProduceTheItem;
     
-        message = calculateSupplyVsDemand(
-                supply, 
-                price, 
-                consumption, 
-                Msupply, 
-                Mdemand, 
-                costToProduceTheItem, 
-                highestPriceConsumersWillPay
-            );
+        message = calculateSupplyVsDemand(supply, consumption);
     
         let revenue = consumption * price;
 

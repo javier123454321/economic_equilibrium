@@ -1,7 +1,7 @@
-import renderSumWidget from '../src/widgets/renderSumWidget.js'
+import renderSumWidget from '../public/src/widgets/renderSumWidget.js'
 const fs = require('fs');
 const path = require('path');
-const html = fs.readFileSync(path.resolve(__dirname, '../index.html'), 'utf8');
+const html = fs.readFileSync(path.resolve(__dirname, '../public/index.html'), 'utf8');
 
 jest
 .dontMock('fs');
@@ -10,9 +10,6 @@ function renderInput(i, id){
     return `
     <input type="radio" name="price" id='${id}' value='${i}'> $${i}
     `;
-}
-function logHTMLStringfromDocument(document){
-    console.log(new XMLSerializer().serializeToString(document));
 }
 
 describe('renderSumWidget', function() {

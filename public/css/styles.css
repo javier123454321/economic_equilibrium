@@ -24,13 +24,9 @@ a {
   background-color: whitesmoke; }
 
 .info-icon {
-  border: solid 1px #5a5a5a;
   color: #5a5a5a;
-  padding: 2px 5px;
-  max-height: 8px;
-  width: 4px;
-  border-radius: 10px;
-  font-size: .6em;
+  max-height: 15px;
+  width: 15px;
   cursor: pointer; }
   .info-icon + .tooltip {
     position: absolute;
@@ -98,6 +94,8 @@ a {
     justify-content: center; }
   .flex .self-right {
     justify-self: end; }
+  .flex.align-center {
+    align-items: center; }
 
 .text-al-right {
   text-align: right; }
@@ -113,6 +111,9 @@ a {
 
 .pb-0 {
   padding-bottom: 0; }
+
+.ml-1 {
+  margin-left: .5em; }
 
 .mt-2 {
   margin-top: 1em; }

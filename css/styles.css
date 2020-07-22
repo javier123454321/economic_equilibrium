@@ -27,6 +27,8 @@ a {
   border: solid 1px #5a5a5a;
   color: #5a5a5a;
   padding: 2px 5px;
+  max-height: 8px;
+  width: 4px;
   border-radius: 10px;
   font-size: .6em;
   cursor: pointer; }
@@ -87,10 +89,15 @@ a {
   #input .column {
     flex-direction: column; }
 
+.drop-shadow {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06), 0 3px 6px rgba(0, 0, 0, 0.03); }
+
 .flex {
   display: flex; }
   .flex.content-center {
     justify-content: center; }
+  .flex .self-right {
+    justify-self: end; }
 
 .text-al-right {
   text-align: right; }
@@ -98,8 +105,8 @@ a {
 .text-al-center {
   text-align: center; }
 
-.drop-shadow {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06), 0 3px 6px rgba(0, 0, 0, 0.03); }
+.text-al-left {
+  text-align: left; }
 
 .p-1 {
   padding: .5em; }
@@ -110,11 +117,17 @@ a {
 .mt-2 {
   margin-top: 1em; }
 
+.mt-4 {
+  margin-top: 2em; }
+
 .w-fit {
   width: fit-content; }
 
 .w-100 {
   width: 100%; }
+
+.w-20 {
+  width: 20em; }
 
 #result {
   color: #1d1d1d; }

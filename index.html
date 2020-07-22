@@ -11,9 +11,15 @@
     <body>
         <div class="content">
             <div class="card drop-shadow text-al-center">
-                <h1>
-                    What is the <a href='https://en.wikipedia.org/wiki/Economic_equilibrium' alt="Wikipedia Link to Equilibrium Price">equilibrium price?</a>
-                </h1>
+                <div class="header flex content-center">
+                    <h1>
+                        What is the <a href='https://en.wikipedia.org/wiki/Economic_equilibrium' alt="Wikipedia Link to Equilibrium Price">equilibrium price?</a>
+                    </h1>
+                    <div>
+                        <span class="info-icon" id="wikipedia-info"> i </span> <span class="tooltip text-al-left w-20 self-right" id="wikipedia-extract">From Wikipedia: <br></span>
+                    </div>
+                </div>
+                
                 <iframe width="500" height="300" src="https://www.youtube-nocookie.com/embed/PEMkfgrifDw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div id="input" class="card drop-shadow">
@@ -25,21 +31,21 @@
                             <span>Maximum Price:
                                 <span class="info-icon"> i </span> <span class="tooltip">The price at which not single consumer will buy the product.</span>
                              </span>
-                            <input class="text-input p-1 pb-0" type="text" name="demand" value="10000" id="higestPrice-input"><br>
+                            <input class="text-input p-1 pb-0" type="text" name="demand" value="10000" autocomplete="off" id="higestPrice-input"><br>
                         </div>
                         <div class="text-al-right">
                             <span>Cost:
                                     <span class="info-icon"> i </span> <span class="tooltip">The cost to make the product. Selling for less does not make a profit.</span>
                             </span> 
-                            <input class="text-input p-1 pb-0" type="text" name="demand" value="8000" id="cost-input"><br>
+                            <input class="text-input p-1 pb-0" type="text" name="demand" value="8000" autocomplete="off" id="cost-input"><br>
                         </div>
                         <div class="text-al-right">
                             <span>Supply Multiplyer: <span class="info-icon"> i </span> <span class="tooltip">How many items can the company provide</span></span>
-                            <input class="text-input p-1 pb-0" type="text" name="supply" value="0" id="supply-input"><br>
+                            <input class="text-input p-1 pb-0" type="text" name="supply" value="0" autocomplete="off" id="supply-input"><br>
                         </div>
                         <div class="text-al-right">
                             <span>Demand Multiplyer: </span>
-                            <input class="text-input p-1 pb-0" type="text" name="demand" value="-500" id="demand-input"><br>
+                            <input class="text-input p-1 pb-0" type="text" name="demand" value="-500" autocomplete="off" id="demand-input"><br>
                         </div>
 
 

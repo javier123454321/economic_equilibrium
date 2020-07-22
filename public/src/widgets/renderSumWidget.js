@@ -1,7 +1,7 @@
  function calculateSupplyVsDemand(supply, consumption) {
     if (consumption > supply) {
         return `Demand is greater than supply, This would leave consumers with a shortage of 
-        <span class='emphasis'> ${consumption - supply} </span> units. 
+        <span class='emphasis'> ${Math.floor( consumption - supply)} </span> units. 
         The company would have to either increase price or produce more.`;
     }
 
@@ -9,10 +9,10 @@
         return "This price is higher than what people are willing to pay, there is excess supply";
     }
 
-    if (consumption == supply) {
+    if (Math.floor(supply - consumption) == 0 ) {
         return "This is the equilibrium price";
     }
-    return "People will buy some, but there will be <span class='emphasis'>"+( supply - consumption ) +"</span> items left over as it is too expensive"
+    return "People will buy some, but there will be <span class='emphasis'>"+Math.floor( supply - consumption ) +"</span> items left over as it is too expensive"
 }
 
  export default function renderSumWidget(){
@@ -29,17 +29,10 @@
         let supply;
         let message = "";
 
-        let price;
-        let priceOptions = document.getElementsByName("price");
+        let price = parseFloat(document.getElementById('price').innerHTML);
     
         message = "";
         
-        for (let i = 0; i < priceOptions.length; i++) {
-            if (priceOptions[i].checked) {
-                price = priceOptions[i].value;
-                break;
-            }
-        }
         consumption = (price * Mdemand) + highestPriceConsumersWillPay;
         if(consumption < 0){
             consumption = 0
@@ -54,7 +47,7 @@
         <h3>Amount of Products Sold:</h3> 
         ${consumption} per month at $${price} 
         <h4> Yields: </h4>
-        Revenue: $${revenue} per month
+        Revenue: $${parseFloat(revenue).toFixed(2)} per month
         <p class="output-message">${message}</p>
      `
         if(isNaN(price)){

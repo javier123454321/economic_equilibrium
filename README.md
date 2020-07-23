@@ -12,7 +12,7 @@ To provide a tool for explaining and displaying information about the basics of 
 [x] Change how results appear to be more graphic
 [x] Add content that explains equilibrium price
 [x] Improve accesibility
-[ ] Save data within the browser that persists between sessions
+[ ] Save data within the browser that persists between sessions (would do that with localstorage. but will keep this as a TODO for now.)
 [x] Integrate with a public API
 
 ### To run
@@ -46,4 +46,8 @@ The app is meant to show the relationship of supply and demand. It is light on v
 
 ### Accesibility
 
-I tried to keep the HTML to be fairly semantic, but got into trouble when doing the tooltip. I felt like I uncovered a can of worms in regards to accessibility that I did not expect. TODO is to create all the right states including hover, hidden, and expanded. 
+I tried to keep the HTML to be fairly semantic, using proper elements according to their function, but got into trouble when doing the tooltip. Currently it uses the aria-describedby label which will partially help, but is not sufficient. I felt like I uncovered a can of worms in regards to accessibility that I did not expect. TODO is to create all the right states including hover, hidden, and expanded. 
+
+### Testing
+
+I approached this, not necessarily in a test-driven way, but did put an emphasis on testing. Overall, the approach that I prefer is integration testing rather than purely unit testing, as integration tests are more useful and informative, in my opinion. This proved useful already, allowing me to edit and refactor with confidence as I added more application logic here.

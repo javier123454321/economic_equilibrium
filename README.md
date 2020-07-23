@@ -7,12 +7,19 @@ To provide a tool for explaining and displaying information about the basics of 
 
 ### Requirements
 [x] Refactor code into reusable snippets
+
 [x] Structure code effectively
+
 [x] Improve functionality and receive inputs
+
 [x] Change how results appear to be more graphic
+
 [x] Add content that explains equilibrium price
+
 [x] Improve accesibility
+
 [ ] Save data within the browser that persists between sessions (would do that with localstorage. but will keep this as a TODO for now.)
+
 [x] Integrate with a public API
 
 ### To run

@@ -2,6 +2,8 @@
 
 Written in Javascript, Html, and SCSS by Javier Gonzalez.
 
+[live demo](https://keypathchallenge.neocities.org/)
+
 ## The Brief
 To provide a tool for explaining and displaying information about the basics of [Economic Equilibrium](https://en.wikipedia.org/wiki/Economic_equilibrium). 
 

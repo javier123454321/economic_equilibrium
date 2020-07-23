@@ -16,7 +16,8 @@
                         What is the <a href='https://en.wikipedia.org/wiki/Economic_equilibrium' alt="Wikipedia Link to Equilibrium Price">equilibrium price?</a>
                     </h1>
                     <div>
-                        <img class="info-icon ml-1" id="wikipedia-info" src="assets/icons/info.svg" alt="info"> <span class="tooltip text-al-left w-20 self-right" id="wikipedia-extract">From Wikipedia: <br></span>
+                        <img class="info-icon ml-1" id="wikipedia-info" src="assets/icons/info.svg" alt="info" aria-describedby="wikipedia-extract"> 
+                        <span class="tooltip text-al-left w-20 self-right" id="wikipedia-extract" aria-hidden="false">From Wikipedia: <br></span>
                     </div>
                 </div>
                 
@@ -26,25 +27,28 @@
                 <form id="main-form">
                     <div id="xyz-widget" class="section">
                     </div>
-                    <div class="flex column content-center w-fit">
+                    <div class="flex mt-4 column content-center w-fit">
                         <div class="text-al-right">
                             <span>Maximum Price:
-                                <img class="info-icon" id="wikipedia-info" src="assets/icons/info.svg" alt="info">  <span class="tooltip">The price at which not single consumer will buy the product.</span>
+                                <img class="info-icon" id="wikipedia-info" src="assets/icons/info.svg" alt="info" aria-describedby="max-price-tooltip">  <span class="tooltip" id="max-price-tooltip" aria-hidden="false">The price at which not single consumer will buy the product.</span>
                              </span>
                             <input class="text-input p-1 pb-0" type="text" name="demand" value="10000" autocomplete="off" id="higestPrice-input"><br>
                         </div>
                         <div class="text-al-right">
                             <span>Cost:
-                                <img class="info-icon" id="wikipedia-info" src="assets/icons/info.svg" alt="info"><span class="tooltip">The cost to make the product. Selling for less does not make a profit.</span>
+                                <img class="info-icon" id="wikipedia-info" src="assets/icons/info.svg" alt="info" aria-describedby="cost-tooltip"><span class="tooltip" id="cost-tooltip">The cost to make the product. Selling for less does not make a profit.</span>
                             </span> 
                             <input class="text-input p-1 pb-0" type="text" name="demand" value="8000" autocomplete="off" id="cost-input"><br>
                         </div>
                         <div class="text-al-right">
-                            <span>Supply Multiplyer: <img class="info-icon" id="wikipedia-info" src="assets/icons/info.svg" alt="info"> <span class="tooltip">The rate at which suppliers can adapt and grow to consumer demand</span></span>
+                            <span>Supply Multiplyer: <img class="info-icon" id="wikipedia-info" src="assets/icons/info.svg" alt="info" aria-describedby="supply-tooltip"><span class="tooltip" id="supply-tooltip">The rate at which suppliers can adapt and grow to consumer demand</span></span>
                             <input class="text-input p-1 pb-0" type="text" name="supply" value="0" autocomplete="off" id="supply-input"><br>
                         </div>
                         <div class="text-al-right">
-                            <span>Demand Multiplyer: <img class="info-icon" id="wikipedia-info" src="assets/icons/info.svg" alt="info"> <span class="tooltip">The rate at which consumers will stop buying as price increases</span></span></span>
+                            <span>Demand Multiplyer: 
+                                <img class="info-icon" id="wikipedia-info" src="assets/icons/info.svg" alt="info" aria-describedby="demand-tooltip">
+                                <span class="tooltip" id="demand-tooltip">The rate at which consumers will stop buying as price increases
+                        </span>
                             <input class="text-input p-1 pb-0" type="text" name="demand" value="-500" autocomplete="off" id="demand-input"><br>
                         </div>
 

@@ -1,4 +1,4 @@
-import renderPriceWidget from './widgets/RenderPriceWidget.js';
+import {renderPriceWidget} from './widgets/RenderPriceWidget.js';
 import renderSumWidget from './widgets/RenderSumWidget.js';
 import renderSupplyAndDemandEquations from './widgets/RenderSupplyAndDemandWidget.js';
 import setupToolTip from './widgets/RenderWikipediaInfo.js';

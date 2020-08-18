@@ -23,7 +23,6 @@ function renderValue(){
 };
 export default function renderPriceWidget(){
     let template = `
-        <h3>Search for Equilibrium Price for Product:</h3>
         <div id="price-input">
             ${ slider() }
         </div>`

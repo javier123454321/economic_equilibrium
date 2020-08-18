@@ -52,6 +52,9 @@
 .mt-4 {
   margin-top: 2em; }
 
+.mr-1 {
+  margin-right: .5em; }
+
 .mb-4 {
   margin-bottom: 2em; }
 
@@ -60,6 +63,9 @@
 
 .w-100 {
   width: 100%; }
+
+.w-4 {
+  width: 2em; }
 
 .w-20 {
   width: 20em; }
@@ -91,9 +97,8 @@ a {
   width: 100vw; }
 
 .text-input {
-  border: none;
-  border-bottom: solid 1px #464646;
-  background-color: whitesmoke; }
+  border: solid 1px #bbbbbb;
+  border-radius: 4px; }
 
 .info-icon {
   color: #5a5a5a;
@@ -128,7 +133,7 @@ a {
   max-width: 550px;
   border-radius: 8px; }
   .card input {
-    margin-bottom: 1em; }
+    margin: 0 .5em; }
   .card.result {
     max-width: 950px;
     width: 60%;

@@ -24,41 +24,68 @@
                 <div class="card drop-shadow text-al-center m-4 mt-0">
                     <iframe width="500" height="300" src="https://www.youtube-nocookie.com/embed/PEMkfgrifDw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <div id="input" class="card drop-shadow m-4 mt-0">
-                    <form id="main-form">
-                        <div id="xyz-widget" class="section">
-                        </div>
-                        <div class="flex mt-4 column content-center w-fit">
-                            <div class="text-al-right">
-                                <span>Maximum Price:
-                                    <img class="info-icon" id="wikipedia-info" src="assets/icons/info.svg" alt="info" aria-describedby="max-price-tooltip">  <span class="tooltip" id="max-price-tooltip" aria-hidden="false">The price at which not single consumer will buy the product.</span>
-                                 </span>
-                                <input class="text-input p-1 pb-0" type="text" name="demand" value="10000" autocomplete="off" id="higestPrice-input"><br>
+                <div class="card-group-hz">
+                    <div id="input" class="card drop-shadow m-4 mt-0">
+                        <form id="main-form">
+                            <h3 class="w-100 text-al-center">Adjust Supply and Demand Equations</h3>
+                            <div class="flex mt-4 column content-center w-fit">
+                                <div class="flex align-center">
+                                    <h4 class="mr-1">Demand Curve:</h4><span class="">Qd = D(p) + Pm</span>
+                                </div>
+                                <div class="flex align-center">
+                                    <span>Qd = </span>
+                                    <input class="text-input p-1 w-4" type="text" name="demandMultiplyer" value="-500" autocomplete="off" id="demand-input"><br>
+                                    <span>(P) + </span>
+                                    <input class="text-input p-1 w-4" type="text" name="demand" value="100" autocomplete="off" id="higestPrice-input"><br>
+                                </div>
+
+                                <div class="flex align-center">
+                                    <h4 class="mr-1">Supply Curve:</h4><span class="">Qd = D(p) + Pm</span>
+                                </div>
+
+                                <div class="flex align-center">
+                                    <span>Qs = </span>
+                                    <input class="text-input p-1 w-4" type="text" name="supplyMultiplyer" value="-500" autocomplete="off" id="supply-input"><br>
+                                    <span>(P) - </span>
+                                    <input class="text-input p-1 w-4" type="text" name="supply" value="800" autocomplete="off" id="cost-input">><br>
+                                </div>
+
+                                <!-- <div class="text-al-right">
+                                    <span>Maximum Price:
+                                        <img class="info-icon" id="wikipedia-info" src="assets/icons/info.svg" alt="info" aria-describedby="max-price-tooltip">  <span class="tooltip" id="max-price-tooltip" aria-hidden="false">The price at which not single consumer will buy the product.</span>
+                                     </span>
+                                    <input class="text-input p-1 pb-0" type="text" name="demand" value="10000" autocomplete="off" id="higestPrice-input"><br>
+                                </div>
+                                <div class="text-al-right">
+                                    <span>Cost:
+                                        <img class="info-icon" id="wikipedia-info" src="assets/icons/info.svg" alt="info" aria-describedby="cost-tooltip"><span class="tooltip" id="cost-tooltip">The cost to make the product. Selling for less does not make a profit.</span>
+                                    </span> 
+                                    <input class="text-input p-1 pb-0" type="text" name="demand" value="8000" autocomplete="off" id="cost-input"><br>
+                                </div>
+                                <div class="text-al-right">
+                                    <span>Supply Multiplyer: <img class="info-icon" id="wikipedia-info" src="assets/icons/info.svg" alt="info" aria-describedby="supply-tooltip"><span class="tooltip" id="supply-tooltip">The rate at which suppliers can adapt and grow to consumer demand</span></span>
+                                    <input class="text-input p-1 pb-0" type="text" name="supply" value="0" autocomplete="off" id="supply-input"><br>
+                                </div>
+                                <div class="text-al-right">
+                                    <span>Demand Multiplyer: 
+                                        <img class="info-icon" id="wikipedia-info" src="assets/icons/info.svg" alt="info" aria-describedby="demand-tooltip">
+                                        <span class="tooltip" id="demand-tooltip">The rate at which consumers will stop buying as price increases
+                                </span> -->
+                                    <!-- <input class="text-input p-1 pb-0" type="text" name="demand" value="-500" autocomplete="off" id="demand-input"><br> -->
+                                <!-- </div> -->
+        
+        
                             </div>
-                            <div class="text-al-right">
-                                <span>Cost:
-                                    <img class="info-icon" id="wikipedia-info" src="assets/icons/info.svg" alt="info" aria-describedby="cost-tooltip"><span class="tooltip" id="cost-tooltip">The cost to make the product. Selling for less does not make a profit.</span>
-                                </span> 
-                                <input class="text-input p-1 pb-0" type="text" name="demand" value="8000" autocomplete="off" id="cost-input"><br>
-                            </div>
-                            <div class="text-al-right">
-                                <span>Supply Multiplyer: <img class="info-icon" id="wikipedia-info" src="assets/icons/info.svg" alt="info" aria-describedby="supply-tooltip"><span class="tooltip" id="supply-tooltip">The rate at which suppliers can adapt and grow to consumer demand</span></span>
-                                <input class="text-input p-1 pb-0" type="text" name="supply" value="0" autocomplete="off" id="supply-input"><br>
-                            </div>
-                            <div class="text-al-right">
-                                <span>Demand Multiplyer: 
-                                    <img class="info-icon" id="wikipedia-info" src="assets/icons/info.svg" alt="info" aria-describedby="demand-tooltip">
-                                    <span class="tooltip" id="demand-tooltip">The rate at which consumers will stop buying as price increases
-                            </span>
-                                <input class="text-input p-1 pb-0" type="text" name="demand" value="-500" autocomplete="off" id="demand-input"><br>
-                            </div>
-    
-    
                         </div>
                         <div id="button-container" class="w-100 flex content-center">
                             <input id="calculate" class="button mt-2 drop-shadow" type="button" value="Calculate">
+                
+                        </form>
+                    </div>
+                    <div class="card drop-shadow">
+                        <div id="xyz-widget" class="section">
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
             

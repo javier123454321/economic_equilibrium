@@ -1,3 +1,5 @@
+ import { toCurrency } from '../services/CurrencyService.js';
+
  function calculateSupplyVsDemand(supply, consumption) {
     if (consumption > supply) {
         return `Demand is greater than supply, This would leave consumers with a shortage of 
@@ -28,7 +30,7 @@
         let supply;
         let message = "";
 
-        let price = parseFloat(document.getElementById('price').innerHTML);
+        let price = toCurrency(document.getElementById('price').value, false);
     
         message = "";
         
@@ -46,7 +48,7 @@
         <h3>Amount of Products Sold:</h3> 
         ${consumption} per month at $${price} 
         <h4> Yields: </h4>
-        Revenue: $${parseFloat(revenue).toFixed(2)} per month
+        Revenue: $${ toCurrency(revenue) } per month
         <p class="output-message">${message}</p>
      `
         if(isNaN(price)){

@@ -6,17 +6,26 @@ body{
   font-family: Ubuntu, sans-serif;
   min-width: 100vh;
 }
+.content{
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  min-width: 100vw;
+}
 h1, h2,
 h3, h4,
 h5, h6{
   font-weight: 700;
 }
 h1{
-  font-size: 1.8em;
+  font-size: 2em;
 }
 a{
   color: $accent-orange-1;
   text-decoration: none;
+}
+.header {
+  width: 100vw;
 }
 .text-input{
   border: none;
@@ -55,22 +64,18 @@ a{
   color: $grey-6;
   font-weight: 600;
 }
-.content{
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 100vw;
-}
 .card {
-  margin:20px;
   padding:20px;
   background-color: white;
   max-width: 550px;
   border-radius: 8px;
-  width: 100%;
   input{
     margin-bottom: 1em;
+  }
+  &.result{
+    max-width: 950px;
+    width: 60%;
+    min-height: 80vh;
   }
 }
 .button{

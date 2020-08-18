@@ -4,6 +4,9 @@
 .drop-shadow {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06), 0 3px 6px rgba(0, 0, 0, 0.03); }
 
+.float-left {
+  float: left; }
+
 .flex {
   display: flex; }
   .flex.content-center {
@@ -28,14 +31,29 @@
 .pb-0 {
   padding-bottom: 0; }
 
+.m-4 {
+  margin: 2em; }
+
+.mt-0 {
+  margin-top: 0; }
+
 .ml-1 {
   margin-left: .5em; }
+
+.ml-4 {
+  margin-left: 2em; }
+
+.ml-6 {
+  margin-left: 3em; }
 
 .mt-2 {
   margin-top: 1em; }
 
 .mt-4 {
   margin-top: 2em; }
+
+.mb-4 {
+  margin-bottom: 2em; }
 
 .w-fit {
   width: fit-content; }
@@ -51,17 +69,26 @@ body {
   font-family: Ubuntu, sans-serif;
   min-width: 100vh; }
 
+.content {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  min-width: 100vw; }
+
 h1, h2,
 h3, h4,
 h5, h6 {
   font-weight: 700; }
 
 h1 {
-  font-size: 1.8em; }
+  font-size: 2em; }
 
 a {
   color: #b36703;
   text-decoration: none; }
+
+.header {
+  width: 100vw; }
 
 .text-input {
   border: none;
@@ -95,22 +122,17 @@ a {
   color: #1d1d1d;
   font-weight: 600; }
 
-.content {
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 100vw; }
-
 .card {
-  margin: 20px;
   padding: 20px;
   background-color: white;
   max-width: 550px;
-  border-radius: 8px;
-  width: 100%; }
+  border-radius: 8px; }
   .card input {
     margin-bottom: 1em; }
+  .card.result {
+    max-width: 950px;
+    width: 60%;
+    min-height: 80vh; }
 
 .button {
   border-radius: 4px;

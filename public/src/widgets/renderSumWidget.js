@@ -16,8 +16,7 @@
 }
 
  export default function renderSumWidget(){
-    
-    document.getElementById("calculate").addEventListener("click", calculateOutput);
+    calculateOutput();
     
     function calculateOutput() {
         let Mdemand =  parseInt(document.getElementById("demand-input").value);

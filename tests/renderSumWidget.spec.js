@@ -15,11 +15,16 @@ function renderInput(price){
 describe('renderSumWidget', function() {
     beforeEach(() => {
         document.documentElement.innerHTML = html.toString();
-        document.getElementById('xyz-widget').innerHTML = renderInput("4.00");
+        document.getElementById('xyz-widget').innerHTML = renderInput("6.00");
         renderSumWidget();
     })
-    it('Should be blank before a user submits an input', () => {
-        expect( document.getElementById('result').textContent ).toBe("");
+    it('Should display an the economic equilibrium when loading the page', () => {
+        expect( document.getElementById('result').textContent ).toBe(`
+        Amount of Products Sold: 
+        70 per month at $6 
+         Yields: 
+        Revenue: $420.00 per month
+        This is the equilibrium price`);
         expect( document.getElementById('result').querySelector('p') ).toBeFalsy();
         }
     );
@@ -28,11 +33,7 @@ describe('renderSumWidget', function() {
         expect( document.getElementById('result').querySelector('h3').textContent ).toBe("Amount of Products Sold:");
     })
     it('Should render the success message when equilibrium is reached, and descriptive errors when not', () => {
-        document.getElementById("calculate").click();
-        expect( document.getElementById('result').querySelectorAll('p.output-message')[0].textContent ).toBe("This is the equilibrium price");
-        
         document.getElementById('xyz-widget').innerHTML = renderInput("30");
-        document.getElementById("calculate").click();
         expect( document.getElementById('result').querySelectorAll('p.output-message')[0].textContent ).toBe("This price is higher than what people are willing to pay, there is excess supply");
         
         document.getElementById('xyz-widget').innerHTML = renderInput("3");

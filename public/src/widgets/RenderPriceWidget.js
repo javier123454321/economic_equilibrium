@@ -1,32 +1,18 @@
+import {toCurrency} from '../services/CurrencyService.js';
 
-function slider(){
-    return `
-    <input id="price-slider" class="slider" type="range" min="1.00" max="10000" value="400">
-    <div id="current-price"></div>
-    `;
-}
-function renderValue(){
-    function toCurrency(valueInCents){
-        let value = valueInCents/100;
-        let output = String(value).split(".");
-        if (output.length == 1){
-            output[1] = "00";
-        } else if (output[1].length == 1){
-            output[1] += "0"
-        }
-        return output.join(".")
-    }
-
+function updateValue(){
     let sliderValue = document.getElementById('price-slider').value;
-
-    document.getElementById("current-price").innerHTML = `Price: $<span id="price">${toCurrency(sliderValue)}</span>`
+    document.getElementById('price').value = toCurrency(sliderValue);
 };
+
+function updateSlider(){
+    let formValue = document.getElementById('price').value;
+    document.getElementById('price-slider').value = parseFloat(formValue * 100);
+    console.log(formValue);
+    document.getElementById('price').value = toCurrency(formValue, false);
+}
+
 export default function renderPriceWidget(){
-    let template = `
-        <div id="price-input">
-            ${ slider() }
-        </div>`
-    document.getElementById('xyz-widget').innerHTML = template;
-    renderValue()
-    document.getElementById('price-slider').addEventListener('change', renderValue);
+    document.getElementById('price-slider').addEventListener('input', updateValue);
+    document.getElementById('price').addEventListener('change', updateSlider)
 }

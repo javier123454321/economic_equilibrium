@@ -66,8 +66,9 @@ a{
 .card {
   padding:20px;
   background-color: white;
-  max-width: 550px;
+  // max-width: 550px;
   border-radius: 8px;
+  flex-grow: inherit;
   input{
     margin: 0 .5em;
   }
@@ -75,6 +76,9 @@ a{
     max-width: 950px;
     width: 60%;
     min-height: 80vh;
+  }
+  &-group-hz{
+    min-height: 40vh;
   }
 }
 .button{

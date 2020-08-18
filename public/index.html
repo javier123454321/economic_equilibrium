@@ -24,11 +24,10 @@
                 <div class="card drop-shadow text-al-center m-4 mt-0">
                     <iframe width="500" height="300" src="https://www.youtube-nocookie.com/embed/PEMkfgrifDw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <div class="card-group-hz">
-                    <div id="input" class="card drop-shadow m-4 mt-0">
+                    <div id="input" class="card card-group-hz drop-shadow m-4 mt-0">
                         <form id="main-form">
-                            <h3 class="w-100 text-al-center">Adjust Supply and Demand Equations</h3>
-                            <div class="flex mt-4 column content-center w-fit">
+                            <h3 class="w-100 text-al-center m-0">Adjust Supply and Demand Equations</h3>
+                            <div class="flex column content-center w-fit">
                                 <div class="flex align-center">
                                     <h4 class="mr-1">Demand Curve:</h4><span class="">Qd = D(p) + Pm</span>
                                 </div>
@@ -47,25 +46,20 @@
                                     <span>Qs = </span>
                                     <input class="text-input p-1 w-4" type="text" name="supplyMultiplyer" value="5" autocomplete="off" id="supply-input"><br>
                                     <span>(P) + </span>
-                                    <input class="text-input p-1 w-4" type="text" name="supply" value="40" autocomplete="off" id="cost-input">><br>
+                                    <input class="text-input p-1 w-4" type="text" name="supply" value="40" autocomplete="off" id="cost-input"><br>
                                 </div>
 
                             </div>
-                        </div>
-                        <div id="button-container" class="w-100 flex content-center">
-                            <input id="calculate" class="button mt-2 drop-shadow" type="button" value="Calculate">
-                
                         </form>
                     </div>
-                    <div class="card drop-shadow">
-                        <div id="xyz-widget" class="section">
-                        </div>
-                    </div>
-                </div>
             </div>
             
             <div class="card drop-shadow result mb-4">
-                <div id="current-equations"></div>
+                <div class="card drop-shadow text-al-center">
+                    <div id="price-slider-widget" class="section"></div>
+                    <h3 class="mt-2">Current Price</h3>
+                    <strong>$</strong><input class="text-input p-1 w-8" type="text" name="price" id="price" value="6.00" autocomplete="off" id="cost-input">
+                </div>
                 <div id=result></div>
             </div>
         </div>

@@ -24,12 +24,14 @@
                 <div class="card drop-shadow text-al-center m-4 mt-0">
                     <iframe width="500" height="300" src="https://www.youtube-nocookie.com/embed/PEMkfgrifDw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                    <div id="input" class="card card-group-hz drop-shadow m-4 mt-0">
+                <div class="card-group-hz flex row mr-4">
+                    <div id="input" class="card drop-shadow m-4 mt-0 mb-0">
                         <form id="main-form">
                             <h3 class="w-100 text-al-center m-0">Adjust Supply and Demand Equations</h3>
-                            <div class="flex column content-center w-fit">
-                                <div class="flex align-center">
-                                    <h4 class="mr-1">Demand Curve:</h4><span class="">Qd = D(p) + Pm</span>
+                            <div class="flex column content-center w-fit mt-4">
+                                <div>
+                                    <h4 class="mr-1 mb-0">Demand Curve:</h4>
+                                    <h5 class="mt-1">Qd = D(p) + Pm</h5>
                                 </div>
                                 <div class="flex align-center">
                                     <span>Qd = </span>
@@ -38,8 +40,9 @@
                                     <input class="text-input p-1 w-4" type="text" name="demand" value="100" autocomplete="off" id="higestPrice-input"><br>
                                 </div>
 
-                                <div class="flex align-center">
-                                    <h4 class="mr-1">Supply Curve:</h4><span class="">Qd = D(p) + Pm</span>
+                                <div>
+                                    <h4 class="mr-1 mb-0">Supply Curve:</h4>
+                                    <h5 class="mt-1">Qd = D(p) + Pm</h5>
                                 </div>
 
                                 <div class="flex align-center">
@@ -52,17 +55,19 @@
                             </div>
                         </form>
                     </div>
+                    <div class="card drop-shadow text-al-center">
+                        <div id="price-slider-widget" class="section"></div>
+                        <div id="price-input">
+                            <input id="price-slider" class="slider" type="range" min="1.00" max="10000" value="600">
+                        </div>
+                        <h3 class="mt-2">Current Price</h3>
+                        <strong>$</strong><input class="text-input p-1 w-8" type="text" name="price" id="price" value="6.00" autocomplete="off" id="cost-input">
+                        <button class="button mt-4" id="calculate-equilibrium-button">Calculate Equilibrium Price</button>
+                    </div>
+                </div>
             </div>
             
             <div class="card drop-shadow result mb-4">
-                <div class="card drop-shadow text-al-center">
-                    <div id="price-slider-widget" class="section"></div>
-                    <div id="price-input">
-                        <input id="price-slider" class="slider" type="range" min="1.00" max="10000" value="600">
-                    </div>
-                    <h3 class="mt-2">Current Price</h3>
-                    <strong>$</strong><input class="text-input p-1 w-8" type="text" name="price" id="price" value="6.00" autocomplete="off" id="cost-input">
-                </div>
                 <div id=result></div>
             </div>
         </div>

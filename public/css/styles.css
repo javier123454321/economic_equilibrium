@@ -34,11 +34,23 @@
 .m-0 {
   margin: 0; }
 
+.m-2 {
+  margin: 1em; }
+
 .m-4 {
   margin: 2em; }
 
 .mt-0 {
   margin-top: 0; }
+
+.mt-1 {
+  margin-top: .5em; }
+
+.mt-2 {
+  margin-top: 1; }
+
+.mt-4 {
+  margin-top: 2; }
 
 .ml-1 {
   margin-left: .5em; }
@@ -154,19 +166,24 @@ a {
     width: 60%;
     min-height: 80vh; }
   .card-group-hz {
-    min-height: 40vh; }
+    min-height: 43vh; }
 
 .button {
   border-radius: 4px;
   background-color: #5a5a5a;
   color: #e4e4e4;
   border: none;
-  padding: 1.5em 4em;
-  transition: .3s ease-in-out; }
-  .button:hover {
+  padding: 1em 2em;
+  transition: .1s ease-in-out; }
+  .button:hover, .button:focus {
     cursor: pointer;
-    transform: scale(1.01);
-    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.06), 0 3px 9px rgba(0, 0, 0, 0.03); }
+    transform: translateY(-1px);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.09), 0 3px 9px rgba(0, 0, 0, 0.07); }
+  .button:focus {
+    border: #e4e4e4 2px; }
+  .button:active {
+    transform: translateY(0);
+    background-color: #464646; }
 
 .slider {
   width: 100%;

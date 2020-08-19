@@ -66,7 +66,6 @@ a{
 .card {
   padding:20px;
   background-color: white;
-  // max-width: 550px;
   border-radius: 8px;
   flex-grow: inherit;
   input{
@@ -78,7 +77,7 @@ a{
     min-height: 80vh;
   }
   &-group-hz{
-    min-height: 40vh;
+    min-height: 43vh;
   }
 }
 .button{
@@ -86,12 +85,19 @@ a{
   background-color: $grey-3;
   color: $soft-grey-2;
   border: none;
-  padding: 1.5em 4em;
-  transition: .3s ease-in-out;
-  &:hover{
+  padding: 1em 2em;
+  transition: .1s ease-in-out;
+  &:hover, &:focus{
     cursor: pointer;
-    transform: scale(1.01);
-    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.06), 0 3px 9px rgba(0, 0, 0, 0.03);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.09), 0 3px 9px rgba(0, 0, 0, 0.07);
+  }
+  &:focus{
+    border: $soft-grey-2 2px;
+  }
+  &:active{
+    transform: translateY(0);
+    background-color: $grey-4;
   }
 }
 .slider{

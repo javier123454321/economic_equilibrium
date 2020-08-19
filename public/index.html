@@ -9,7 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
         </head>
     <body> 
-        <div class="header flex align-center ml-6 mt-4">
+        <div class="header flex align-center ml-6">
             <h1>
                 What is the <a href='https://en.wikipedia.org/wiki/Economic_equilibrium' alt="Wikipedia Link to Equilibrium Price">equilibrium price?</a>
             </h1>
@@ -56,11 +56,11 @@
                         </form>
                     </div>
                     <div class="card drop-shadow text-al-center">
+                        <h3 class="mt-2">Current Price</h3>
                         <div id="price-slider-widget" class="section"></div>
-                        <div id="price-input">
+                        <div id="price-input" class="mb-2">
                             <input id="price-slider" class="slider" type="range" min="1.00" max="10000" value="600">
                         </div>
-                        <h3 class="mt-2">Current Price</h3>
                         <strong>$</strong><input class="text-input p-1 w-8" type="text" name="price" id="price" value="6.00" autocomplete="off" id="cost-input">
                         <button class="button mt-4" id="calculate-equilibrium-button">Calculate Equilibrium Price</button>
                     </div>

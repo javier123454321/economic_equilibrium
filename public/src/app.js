@@ -1,12 +1,12 @@
 import {renderPriceWidget} from './widgets/RenderPriceWidget.js';
 import renderSumWidget from './widgets/RenderSumWidget.js';
-import renderSupplyAndDemandEquations from './widgets/RenderSupplyAndDemandWidget.js';
 import setupToolTip from './widgets/RenderWikipediaInfo.js';
+import calculateEquilibriumPrice from './widgets/EquilibriumService.js';
 
 export default function renderApp(){
     renderPriceWidget();
     renderSumWidget();
-    renderSupplyAndDemandEquations();
     setupToolTip();
+    calculateEquilibriumPrice();
 };
 renderApp();

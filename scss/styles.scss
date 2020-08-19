@@ -47,6 +47,11 @@ a{
     z-index: -1;
     transition: .3s ease-in-out;
   }
+  & + .tooltip:hover, & + .tooltip:focus{
+    z-index: 2;
+    opacity: 1;
+    cursor: pointer;
+  }
   &:hover, &:focus{
     & + .tooltip{
       z-index: 2;

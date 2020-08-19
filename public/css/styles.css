@@ -79,6 +79,9 @@
 .mb-0 {
   margin-bottom: 0; }
 
+.mb-1 {
+  margin-bottom: .5em; }
+
 .mb-2 {
   margin-bottom: 1em; }
 
@@ -144,6 +147,10 @@ a {
     opacity: 0;
     z-index: -1;
     transition: .3s ease-in-out; }
+  .info-icon + .tooltip:hover, .info-icon + .tooltip:focus {
+    z-index: 2;
+    opacity: 1;
+    cursor: pointer; }
   .info-icon:hover + .tooltip, .info-icon:focus + .tooltip {
     z-index: 2;
     opacity: 1; }

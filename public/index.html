@@ -31,18 +31,27 @@
                             <div class="flex column content-center w-fit mt-4">
                                 <div>
                                     <h4 class="mr-1 mb-0">Demand Curve:</h4>
-                                    <h5 class="mt-1">Qd = D(p) + Pm</h5>
+                                    <div class="flex align-center mb-2 mt-1">
+                                        <h5 class="m-0 mr-1">Qd = Pmax - D(P)</h5>
+                                        <img class="info-icon" id="wikipedia-info" src="assets/icons/info.svg" alt="info" aria-describedby="cost-tooltip">
+                                        <span class="tooltip" id="cost-tooltip">Quantity Demanded = (Maximum price a consumer will ever pay for a product) - (Rate at which demand drops as price increases) * (Price Charged per Item)</span>
+                                    </div>
                                 </div>
                                 <div class="flex align-center">
                                     <span>Qd = </span>
-                                    <input class="text-input p-1 w-4" type="text" name="demandMultiplyer" value="-5" autocomplete="off" id="demand-input"><br>
-                                    <span>(P) + </span>
                                     <input class="text-input p-1 w-4" type="text" name="demand" value="100" autocomplete="off" id="higestPrice-input"><br>
+                                    <span> + </span>
+                                    <input class="text-input p-1 w-4" type="text" name="demandMultiplyer" value="-5" autocomplete="off" id="demand-input"><br>
+                                    <span>(P)</span>
                                 </div>
 
                                 <div>
                                     <h4 class="mr-1 mb-0">Supply Curve:</h4>
-                                    <h5 class="mt-1">Qd = D(p) + Pm</h5>
+                                    <div class="flex align-center mb-2 mt-1">
+                                        <h5 class="m-0 mr-1">Qs = Pmin + D(P)</h5>
+                                        <img class="info-icon" id="wikipedia-info" src="assets/icons/info.svg" alt="info" aria-describedby="cost-tooltip">
+                                        <span class="tooltip" id="cost-tooltip">Quantity Supplied = (Minimum Price to Sell the Product at a Profit) + (Rate at which supplier can meet increase in demand) * (Price Charged per Item)</span>
+                                    </div>
                                 </div>
 
                                 <div class="flex align-center">

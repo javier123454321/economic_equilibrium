@@ -30,7 +30,7 @@ describe('renderSumWidget', function() {
         expect( document.getElementById('result').querySelector('h3').textContent ).toBe("Price is too low at $0.01");
     })
 
-    it('Should render the success message when equilibrium is reached, and descriptive errors when not', () => {
+    it('Should render descriptive errors when not in equilibrium', () => {
         updatePrice(8);
         expect( document.getElementById('result').querySelector('h3').textContent ).toBe("$8.00 is too expensive");
     })

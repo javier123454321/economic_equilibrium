@@ -3,15 +3,12 @@ import renderSumWidget from './renderSumWidget.js';
 
 export function updateValue(){
     let sliderValue = document.getElementById('price-slider').value;
-    document.getElementById('price').value = toCurrency(sliderValue);
-    renderSumWidget();
+    updatePrice( toCurrency(sliderValue) );
 };
 
 export function updateSlider(){
     let formValue = document.getElementById('price').value;
-    document.getElementById('price-slider').value = parseFloat(formValue * 100);
-    document.getElementById('price').value = toCurrency(formValue, false);
-    renderSumWidget();
+    updatePrice( toCurrency(formValue, false) );
 }
 
 export function updatePrice(priceToUpdate){

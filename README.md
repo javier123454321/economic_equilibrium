@@ -23,7 +23,7 @@ The page mantains a shared state between the input elements and and the rendered
     renderOutput(output);
 }
 ```
-Issues with this is that it uses the DOM elements for keeping track of state, and is therefore prone towards errors which I am sure you will encounter while testing the project. If the application was to grow in complexity, I would definitely move towards something like RsJx to handle this, and to perform operations (like debouncing the slider) on the different streams of data.
+Issues with this is that it uses the DOM elements for keeping track of state, and is therefore prone towards errors and edge cases. If the application was to grow in complexity, I would definitely move towards something like RsJx to handle this, and to perform operations (like debouncing the slider) on the different streams of data.
 
 ### Code Structure
 With this iteration, I was also able to focus a bit more on separating the logic and the presentation concerns. I created a service directory with elements that are purely logic, to ensure consistent results. Again, with RsJx or a state managing library, even greater isolation could be achieved.
@@ -51,7 +51,7 @@ I decided that this challenge was straightforward enough to skip running it on a
 
 The compartamentalization is achieved throgh the use of ES Modules. The only import for the functionality application is handled through the app.js file in the main `src` folder. All other JavaScript files are imported into that, and run in the `renderApp()` function.
 
-The javascript is structured into snippets refered to as widgets in the application. These have a mixture of business logic and presentation logic. Further work on this would target these to get greater separation of concerns.
+The javascript is structured into snippets refered to as widgets in the application for UI functionality, and services for application logic.
 
 Ths sass files use a utility-first approach inspired by Tailwind css. I know that it can be controversial to put what seems like render logic on the markup, but this approach has proven to be one of the best ways to get consistent results in the application. A great article on separation of concerns between html and css by the author of Tailwind is [here](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/).
 

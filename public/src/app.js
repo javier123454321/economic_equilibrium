@@ -1,11 +1,9 @@
-import {renderPriceWidget} from './widgets/RenderPriceWidget.js';
-import renderSumWidget from './widgets/RenderSumWidget.js';
+import { renderPriceWidget } from './widgets/RenderPriceWidget.js';
 import setupToolTip from './widgets/RenderWikipediaInfo.js';
-import calculateEquilibriumPrice from './widgets/EquilibriumService.js';
+import { calculateEquilibriumPrice } from './services/EquilibriumService.js';
 
 export default function renderApp(){
     renderPriceWidget();
-    renderSumWidget();
     setupToolTip();
     calculateEquilibriumPrice();
 };

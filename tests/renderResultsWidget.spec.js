@@ -1,4 +1,4 @@
-import renderSumWidget from '../public/src/widgets/RenderSumWidget.js';
+import RenderResultsWidget from '../public/src/widgets/RenderResultsWidget.js';
 import { updatePrice } from '../public/src/widgets/RenderPriceWidget.js';
 
 const fs = require('fs');
@@ -14,10 +14,10 @@ function renderInput(price){
     return output
 }
 
-describe('renderSumWidget', function() {
+describe('RenderResultsWidget', function() {
     beforeEach(() => {
         document.documentElement.innerHTML = html.toString();
-        renderSumWidget();
+        RenderResultsWidget();
     })
 
     beforeAll(() => {

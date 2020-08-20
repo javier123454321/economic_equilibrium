@@ -1,5 +1,5 @@
 import {toCurrency} from '../services/CurrencyService.js';
-import renderSumWidget from './renderSumWidget.js';
+import RenderResultsWidget from './RenderResultsWidget.js';
 
 export function updateValue(){
     let sliderValue = document.getElementById('price-slider').value;
@@ -14,7 +14,7 @@ export function updateSlider(){
 export function updatePrice(priceToUpdate){
     document.getElementById('price-slider').value = priceToUpdate * 100
     document.getElementById('price').value = priceToUpdate
-    renderSumWidget();
+    RenderResultsWidget();
 }
 
 export function renderPriceWidget(){

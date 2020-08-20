@@ -48,7 +48,7 @@ function renderOutput(equilibriumInformation) {
     document.getElementById("result").innerHTML = template;
 }
 
- export default function renderSumWidget(){
+ export default function RenderResultsWidget(){
     let output = getEquilibriumOutputFromDOM();
     renderChart(output);
     renderOutput(output);

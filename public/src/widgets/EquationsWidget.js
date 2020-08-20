@@ -1,4 +1,4 @@
-import renderSumWidget from './renderSumWidget.js';
+import RenderResultsWidget from './RenderResultsWidget.js';
 
 export default function equationsWidget(){
     Array.from( document.getElementsByClassName('equationInput') ).forEach(node => {
@@ -20,7 +20,7 @@ function bindUpDownArrowKeys(event, node) {
 
 function renderSumIfValidInput(event) {
     if (!isNaN(event.target.value)) {
-        renderSumWidget();
+        RenderResultsWidget();
     }
     else {
         event.target.value = 0;

@@ -20,8 +20,13 @@ describe('renderSumWidget', function() {
         renderSumWidget();
     })
 
+    beforeAll(() => {
+        global.functionPlot = () => {}
+    })
+
     it('Should display an the economic equilibrium when loading the page', () => {
-        expect( document.getElementById('result').querySelector('h2').textContent ).toBe(`$6.00 is the equilibrium price`);
+        updatePrice(20)
+        expect( document.getElementsByClassName('output-message')[0].querySelector('h2').textContent ).toBe(`$20.00 is the equilibrium price`);
         }
     );
 
@@ -32,6 +37,6 @@ describe('renderSumWidget', function() {
 
     it('Should render descriptive errors when not in equilibrium', () => {
         updatePrice(8);
-        expect( document.getElementById('result').querySelector('h3').textContent ).toBe("$8.00 is too expensive");
+        expect( document.getElementById('result').querySelector('h3').textContent ).toBe("Price is too low at $8.00");
     })
 })

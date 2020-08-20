@@ -5,8 +5,12 @@ const html = fs.readFileSync(path.resolve(__dirname, '../public/index.html'), 'u
 
 jest
 .dontMock('fs');
+const functionPlot = jest.mock();
 
 describe('RenderPriceWidget', function () {
+    beforeAll(() => {
+        global.functionPlot = () => {}
+    })
     beforeEach(() => {
         document.documentElement.innerHTML = html.toString();
         renderPriceWidget();

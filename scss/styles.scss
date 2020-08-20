@@ -100,10 +100,6 @@ a{
   &:focus{
     border: $soft-grey-2 2px;
   }
-  &:active{
-    transform: translateY(0);
-    background-color: $grey-4;
-  }
 }
 .slider{
   width: 100%;

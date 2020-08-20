@@ -4,28 +4,34 @@ Written in Javascript, Html, and SCSS by Javier Gonzalez.
 
 # [live demo](https://keypathchallenge.neocities.org/)
 
-## The Brief
-To provide a tool for explaining and displaying information about the basics of [Economic Equilibrium](https://en.wikipedia.org/wiki/Economic_equilibrium). 
+## *** Updates based on feedback ***
+After speaking with Denise, some of the feedback that I got was that the UI was a bit dull. The original project also lacked an element of interactivity which makes the digestion of content more pallatable. She was absolutely right. 
 
-### Requirements
-[x] Refactor code into reusable snippets
+For this approach, I actually did a quick mockup on Figma to play and iterate without a large time investment from my part. This always proves to be useful, it is much cheaper to iterate on a mockup than on a functioning app.
 
-[x] Structure code effectively
+I then focused on making the entire application more reactive to user input. This presented some challenges, which I overcame and am happy with the result. Any more complexity than this and I would definitely need to rely on libraries that can offload some performance issues which might come up here.
 
-[x] Improve functionality and receive inputs
+Finally, I imported a d3 based function plotting library. I did not want to go with pure d3 for time reasons mostly. If the project was to grow, I would definitely go with d3 to handle the presentation of custom elements.
 
-[x] Change how results appear to be more graphic
+### Reactivity
+The page mantains a shared state between the input elements and and the rendered output. This was starting to get tricky, and my solution was to simply add a callback based approach to re-rendering the DOM on updates. A lot of it is handled in the RenderResultsWidget which calls the right methods on updating the inputs. 
+ i.e.:
+```js
+ export default function RenderResultsWidget(){
+    let output = getEquilibriumOutputFromDOM();
+    renderChart(output);
+    renderOutput(output);
+}
+```
+Issues with this is that it uses the DOM elements for keeping track of state, and is therefore prone towards errors which I am sure you will encounter while testing the project. If the application was to grow in complexity, I would definitely move towards something like RsJx to handle this, and to perform operations (like debouncing the slider) on the different streams of data.
 
-[x] Add content that explains equilibrium price
-
-[x] Improve accesibility
-
-[ ] Save data within the browser that persists between sessions (would do that with localstorage. but will keep this as a TODO for now.)
-
-[x] Integrate with a public API
+### Code Structure
+With this iteration, I was also able to focus a bit more on separating the logic and the presentation concerns. I created a service directory with elements that are purely logic, to ensure consistent results. Again, with RsJx or a state managing library, even greater isolation could be achieved.
 
 ### To run
 Clone the repository and do an `npm install`. If you do not have node, download it from [here](https://www.npmjs.com/get-npm).
+
+
 
 Once dependencies have been downloaded, if you would just like to see the application, run it locally with a live-server through typing: 
 `$ npm run dev`
@@ -48,10 +54,6 @@ The compartamentalization is achieved throgh the use of ES Modules. The only imp
 The javascript is structured into snippets refered to as widgets in the application. These have a mixture of business logic and presentation logic. Further work on this would target these to get greater separation of concerns.
 
 Ths sass files use a utility-first approach inspired by Tailwind css. I know that it can be controversial to put what seems like render logic on the markup, but this approach has proven to be one of the best ways to get consistent results in the application. A great article on separation of concerns between html and css by the author of Tailwind is [here](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/).
-
-### Functionality
-
-The app is meant to show the relationship of supply and demand. It is light on visuals still, but it renders the linear equations that produce the output. The app reads and renders the values dynamically.
 
 ### Accesibility
 

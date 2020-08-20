@@ -1,9 +1,4 @@
-import { updatePrice } from '../widgets/RenderPriceWidget.js';
 import { toCurrency } from './CurrencyService.js';
-
-function bindCalculateToButton(){
-    document.getElementById('calculate-equilibrium-button').addEventListener('click', calculateEquilibriumPrice)
-}
 
 export function calculateEquilibriumPrice(){
     let Mdemand =  parseInt(document.getElementById("demand-input").value);
@@ -12,8 +7,6 @@ export function calculateEquilibriumPrice(){
     let costToProduceTheItem = parseInt(document.getElementById("cost-input").value);
 
     let equilibriumPrice = toCurrency(( highestPriceConsumersWillPay - costToProduceTheItem )/ (Msupply - Mdemand), false);
-    updatePrice(equilibriumPrice);
-    bindCalculateToButton()
     return equilibriumPrice
 }
 
@@ -39,6 +32,11 @@ export function getEquilibriumOutputFromDOM() {
         "supply": supply, 
         "consumption": consumption, 
         "price": price, 
-        "revenue":revenue 
+        "revenue":revenue,
+        "mDemand" : Mdemand,
+        "bDemand" : highestPriceConsumersWillPay,
+        "mSupply": Msupply,
+        "bSupply": costToProduceTheItem,
+        "equilibriumPrice": calculateEquilibriumPrice()
     };
 }

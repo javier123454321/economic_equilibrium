@@ -1,5 +1,6 @@
- import { toCurrency } from '../services/CurrencyService.js';
- import { getEquilibriumOutputFromDOM } from '../services/EquilibriumService.js';
+import { toCurrency } from '../services/CurrencyService.js';
+import { getEquilibriumOutputFromDOM } from '../services/EquilibriumService.js';
+import renderChart from './RenderChart.js';
 
  function calculateStringOutput(equilibriumInformation) {
     if ( Math.abs(equilibriumInformation.supply - equilibriumInformation.consumption) <= 1 ) {
@@ -49,6 +50,7 @@ function renderOutput(equilibriumInformation) {
 
  export default function renderSumWidget(){
     let output = getEquilibriumOutputFromDOM();
+    renderChart(output);
     renderOutput(output);
 }
 

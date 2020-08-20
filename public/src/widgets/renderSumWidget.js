@@ -38,7 +38,7 @@ function renderOutput(equilibriumInformation) {
     let message = calculateStringOutput(equilibriumInformation);
 
     let template = `
-    <div class="output-message">
+    <div class="output-message mt-6">
         ${message}
     </div>
     `;
